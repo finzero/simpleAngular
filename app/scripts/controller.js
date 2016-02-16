@@ -1,4 +1,5 @@
-app.controller('HomeCtrl',['$scope',
+app
+.controller('HomeCtrl',['$scope',
 	function($scope){
 		console.info('this is home controller');
 	}
