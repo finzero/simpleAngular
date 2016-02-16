@@ -17,11 +17,15 @@ app.config(['$routeProvider', '$locationProvider',
         templateUrl: 'app/views/page2.html',
         controller: 'Page2Ctrl'
       }).
-       when('/appJS', {
+      when('/appJS', {
         templateUrl: 'app/views/appJS.html',
         controller: ["$scope",function($scope){
         	console.log('contoh controller langsung');
         }]
+      }).
+      when('/controller', {
+        templateUrl: 'app/views/controller.html',
+        controller: []
       }).
       otherwise({
         redirectTo: '/home'
