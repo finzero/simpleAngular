@@ -3,14 +3,17 @@ Contoh data Binding: <br>
 {{ data }}
 <br>data di controller:
 <pre>
-$scope.string = "ini adalah data dari controller";
+$scope.data = "ini adalah data dari controller";
 </pre>
 
 Merubah data secara dinamis menggunakan ng-model:
 <input type="text" name="data" ng-model="data" placeholder="" style="width:200px"/>
+	
+<pre>&#60;input type="text" name="data" <b>ng-model</b>="data" placeholder="" style="width:200px"/&#62;</pre>
 
 <hr>
-Contoh data berulang (array) : <br>
+Contoh data berulang (array) <br>
+iterasi menggunakan ng-repeat :<br>
 <table border=1>
 	<th>nama</th>
 	<th>telpon</th>
@@ -32,3 +35,17 @@ $scope.data_array = [
 	{"nama" : "fazrin 5", "phone" : "1239299"}
 ];
 </pre>
+
+penggunaan ng-repeat:
+<pre>
+&#60;table border=1&#62;
+	&#60;th&#62;nama&#60;/th&#62;
+	&#60;th&#62;telpon&#60;/th&#62;
+	&#60;tbody&#62;
+		&#60;tr <b>ng-repeat</b>="data in data_array"&#62;
+			&#60;td&#62;{{ data.nama }}&#60;/td&#62;
+			&#60;td&#62;{{ data.phone }}&#60;/td&#62;
+		&#60;/tr&#62;
+	&#60;/tbody&#62;
+&#60;/table&#62;
+</pre><pre>
