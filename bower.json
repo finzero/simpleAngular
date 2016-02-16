@@ -1,0 +1,26 @@
+{
+  "name": "simpleAngular",
+  "version": "1.0.0",
+  "description": "simpleAngular",
+  "main": "index.html",
+  "keywords": [
+    "angular"
+  ],
+  "authors": [
+    "fazrin"
+  ],
+  "license": "MIT",
+  "homepage": "localhost/simpleAngular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0"
+  }
+}

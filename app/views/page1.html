@@ -1,0 +1,33 @@
+Contoh data Binding: <br>
+{{ data }}
+<br>data di controller:
+<pre>
+$scope.string = "ini adalah data dari controller";
+</pre>
+
+Merubah data secara dinamis menggunakan ng-model:
+<input type="text" name="data" ng-model="data" placeholder="" style="width:200px"/>
+
+<hr>
+Contoh data berulang (array) : <br>
+<table border=1>
+	<th>nama</th>
+	<th>telpon</th>
+	<tbody>
+		<tr ng-repeat="data in data_array">
+			<td>{{ data.nama }}</td>
+			<td>{{ data.phone }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<br>data di controller:
+<pre>
+$scope.data_array = [
+	{"nama" : "fazrin 1", "phone" : "12312312"},
+	{"nama" : "fazrin 2", "phone" : "23123123"},
+	{"nama" : "fazrin 3", "phone" : "623"},
+	{"nama" : "fazrin 4", "phone" : "12312"},
+	{"nama" : "fazrin 5", "phone" : "1239299"}
+];
+</pre>

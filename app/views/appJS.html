@@ -1,0 +1,32 @@
+<pre>
+var app = angular.module('simpleAngular',[
+	'ngRoute'
+]);
+
+app.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
+    $routeProvider.
+      when('/home', { <span class="green"> => URL pada browser</span>
+        templateUrl: 'app/views/home.html', <span class="green"> => lokasi file yg di gunakan ketika url '/home' di panggil</span>
+        controller: ['$scope',function($scope){console.log('this is homeCtrl')}] <span class="green"> => Controller langsung</span>
+      }).
+      when('/page1', {
+        templateUrl: 'app/views/page1.html',
+        controller: 'Page1Ctrl'  <span class="green"> => Memanggil Nama Controller pada file lain</span>
+      }).
+      when('/page2', {
+        templateUrl: 'app/views/page2.html',
+        controller: 'Page2Ctrl'
+      }).
+       when('/appJS', {
+        templateUrl: 'app/views/appJS.html',
+        controller: ["$scope",function($scope){ <span class="green"> => $scope merupakan Dependency Injection (DI)</span>
+        	console.log('contoh controller langsung');
+        }]
+      }).
+      otherwise({  <span class="green"> => Jika URL tidak terdaftar pada $routeProvide maka redirect ke halaman '/home'</span>
+        redirectTo: '/home'
+      });
+  }]);
+
+</pre>
